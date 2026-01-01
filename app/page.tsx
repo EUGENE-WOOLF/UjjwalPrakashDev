@@ -1,7 +1,9 @@
 import FloatingLines from "@/components/FloatingLines";
 
+
 export default function Home() {
   return (
+    
     <main className="relative w-screen min-h-[100dvh] overflow-hidden bg-black text-white">
 
       {/* Background */}
@@ -31,8 +33,8 @@ export default function Home() {
             Ujjwal Prakash
           </h1>
 
-          <p className="mt-4 text-lg md:text-xl text-neutral-300">
-            Software Engineer · Go Developer · System Programmer
+          <p className="mt-4 text-lg md:text-xl text-shadow-white">
+             Backend Developer · System Programmer
           </p>
 
           <p className="mt-6 text-base md:text-lg text-neutral-400 leading-relaxed">
@@ -60,5 +62,7 @@ export default function Home() {
         </div>
       </section>
     </main>
+
+
   );
 }

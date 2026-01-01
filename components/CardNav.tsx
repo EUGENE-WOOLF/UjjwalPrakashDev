@@ -3,6 +3,8 @@ import React, { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 // use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
+import { Briefcase } from 'lucide-react';
+
 
 
 
@@ -214,7 +216,29 @@ const CardNav: React.FC<CardNavProps> = ({
             className="card-nav-cta-button hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 items-center h-full font-medium cursor-pointer transition-colors duration-300"
             style={{ backgroundColor:  buttonBgColor, color: buttonTextColor }}
           >
-            Contact
+            <a
+              href="/contact"
+              className="
+                card-nav-cta-button
+                hidden md:inline-flex
+                items-center gap-2
+                h-full px-4
+                rounded-[calc(0.75rem-0.2rem)]
+                font-medium
+                border-0
+                transition-colors duration-300
+                hover:opacity-90
+                focus:outline-none
+              "
+              style={{
+                backgroundColor: buttonBgColor,
+                color: buttonTextColor,
+              }}
+            >
+              <span>Contact</span>
+              <Briefcase className="w-4 h-5 opacity-90 translate-y-[1px]" />
+            </a>
+
           </button>
         </div>
 
