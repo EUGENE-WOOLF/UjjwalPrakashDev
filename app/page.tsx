@@ -2,7 +2,7 @@ import FloatingLines from "@/components/FloatingLines";
 
 export default function Home() {
   return (
-    <main className="relative w-screen h-screen overflow-hidden bg-black text-white">
+    <main className="relative w-screen min-h-[100dvh] overflow-hidden bg-black text-white">
 
       {/* Background */}
       <div className="absolute inset-0 z-0">
@@ -17,15 +17,15 @@ export default function Home() {
         />
       </div>
 
-      {/* 🔹 TOP BACKGROUND SCRIM (THIS WAS MISSING) */}
+      {/* Top background scrim (nav readability) */}
       <div
         className="pointer-events-none absolute top-0 left-0 right-0 h-[140px] z-[1]
         bg-gradient-to-b from-black/90 via-black/60 to-transparent"
       />
 
       {/* Foreground */}
-      <section className="relative z-10 flex h-full items-end justify-center px-6 pointer-events-none">
-        <div className="max-w-3xl text-center pointer-events-auto mb-25">
+      <section className="relative z-10 flex min-h-[100dvh] items-end justify-center px-6 pointer-events-none">
+        <div className="max-w-3xl text-center pointer-events-auto mb-16 md:mb-25">
 
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             Ujjwal Prakash
