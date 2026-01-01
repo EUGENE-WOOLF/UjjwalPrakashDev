@@ -46,6 +46,8 @@
 
 :root {
   --radius: 0.625rem;
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -117,8 +119,17 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family: var(--font-mono);
   }
 }
 

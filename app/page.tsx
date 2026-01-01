@@ -32,7 +32,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-4 text-lg md:text-xl text-neutral-300">
-            Software Engineer · Systems-Oriented Developer
+            Software Engineer · Go Developer · System Programmer
           </p>
 
           <p className="mt-6 text-base md:text-lg text-neutral-400 leading-relaxed">
