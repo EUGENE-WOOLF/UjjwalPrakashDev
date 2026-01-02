@@ -1,11 +1,8 @@
 import FloatingLines from "@/components/FloatingLines";
 
-
 export default function Home() {
   return (
-    
     <main className="relative w-screen min-h-[100dvh] overflow-hidden bg-black text-white">
-
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <FloatingLines
@@ -28,13 +25,12 @@ export default function Home() {
       {/* Foreground */}
       <section className="relative z-10 flex min-h-[100dvh] items-end justify-center px-6 pointer-events-none">
         <div className="max-w-3xl text-center pointer-events-auto mb-16 md:mb-25">
-
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             Ujjwal Prakash
           </h1>
 
           <p className="mt-4 text-lg md:text-xl text-shadow-white">
-             Backend Developer · System Programmer
+            Backend Dev · System Programmer
           </p>
 
           <p className="mt-6 text-base md:text-lg text-neutral-400 leading-relaxed">
@@ -58,11 +54,8 @@ export default function Home() {
               Resume
             </a>
           </div>
-
         </div>
       </section>
     </main>
-
-
   );
 }
