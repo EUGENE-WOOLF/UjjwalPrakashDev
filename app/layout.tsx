@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import MainNav from "@/components/MainNav";
+import { ReactLenis, useLenis } from "lenis/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,9 +31,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${mono.variable} antialiased`}>
-        <MainNav />
-        {children}
+      <body
+        className={`${inter.variable} ${mono.variable} antialiased overflow-x-hidden`}
+      >
+        {/* Lenis MUST wrap scroll content */}
+        <ReactLenis root>
+          <MainNav />
+          {children}
+        </ReactLenis>
       </body>
     </html>
   );
