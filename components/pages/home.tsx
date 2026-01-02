@@ -1,4 +1,6 @@
 import FloatingLines from "@/components/FloatingLines";
+import RotatingText from "../RotatingText";
+
 // import MainNav from "@/components/MainNav";
 
 export default function HomePage() {
@@ -32,11 +34,35 @@ export default function HomePage() {
               Ujjwal Prakash
             </h1>
 
-            <p className="mt-4 text-lg md:text-xl text-shadow-white">
-              Backend Dev · System Programmer
+            <p className="mt-4 text-lg md:text-xl flex justify-center items-center gap-2">
+              {/* Fixed text */}
+              <span className="text-indigo-300 font-medium">I’m</span>
+
+              {/* Rotating text */}
+              <RotatingText
+                texts={[
+                  "a Backend Developer",
+                  "a System Programmer",
+                  "comfortable with AWS",
+                  "focused on correctness & scale",
+                ]}
+                mainClassName="
+      text-indigo-100
+      font-medium
+      leading-none
+    "
+                staggerFrom="last"
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.02}
+                splitLevelClassName="overflow-hidden"
+                transition={{ type: "spring", damping: 30, stiffness: 360 }}
+                rotationInterval={2200}
+              />
             </p>
 
-            <p className="mt-6 text-base md:text-lg text-neutral-400 leading-relaxed">
+            <p className="mt-6 text-base md:text-lg text-neutral-300 leading-relaxed">
               I build performant backend systems, developer tools, and
               production-grade software with a strong focus on correctness,
               scalability, and long-term maintainability.
