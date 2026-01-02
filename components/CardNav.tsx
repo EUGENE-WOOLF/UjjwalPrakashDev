@@ -180,9 +180,9 @@ const CardNav: React.FC<CardNavProps> = ({
   }}
 >
 
-        <div className="card-nav-top absolute inset-x-0 top-0 h-[60px] flex items-center justify-between p-2 pl-[1.1rem] z-[2]">
+        <div className="card-nav-top  absolute inset-x-0 top-0 h-[60px] flex items-center justify-between p-2 pl-[1.1rem] z-[2]">
           <div
-            className={`hamburger-menu ${isHamburgerOpen ? 'open' : ''} group h-full flex flex-col items-center justify-center cursor-pointer gap-[6px] order-2 md:order-none`}
+            className={`hamburger-menu ${isHamburgerOpen ? 'open' : ''} group h-full flex flex-col items-center justify-center cursor-pointer gap-[6px] `}
             onClick={toggleMenu}
             role="button"
             aria-label={isExpanded ? 'Close menu' : 'Open menu'}
@@ -211,7 +211,7 @@ const CardNav: React.FC<CardNavProps> = ({
             />
           </div> */}
 
-          <button
+          {/* <button
             type="button"
             className="card-nav-cta-button hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 items-center h-full font-medium cursor-pointer transition-colors duration-300"
             style={{ backgroundColor:  buttonBgColor, color: buttonTextColor }}
@@ -239,7 +239,30 @@ const CardNav: React.FC<CardNavProps> = ({
               <Briefcase className="w-4 h-5 opacity-90 translate-y-[1px]" />
             </a>
 
-          </button>
+          </button> */}
+          <a
+            href="/contact"
+            className="
+              card-nav-cta-button
+              inline-flex
+              items-center gap-2
+              h-full px-3 md:px-4
+              rounded-[calc(0.75rem-0.2rem)]
+              font-medium
+              cursor-pointer
+              transition-all duration-300
+              hover:opacity-90
+              active:scale-[0.98]
+            "
+            style={{
+              backgroundColor: buttonBgColor,
+              color: buttonTextColor,
+            }}
+          >
+            <span className="text-sm md:text-base">Contact</span>
+            <Briefcase className="w-4 h-4 opacity-90 translate-y-[1px]" />
+          </a>
+
         </div>
 
         <div
