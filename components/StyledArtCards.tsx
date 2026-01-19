@@ -2,12 +2,15 @@ export default function StyledArtCard() {
   return (
     <div
       className="
-
-        w-[90vw] md:w-[80vw] lg:w-[60vw]
-        flex flex-col justify-center items-center
-        px-4 md:px-10 py-4 md:py-6
-        m-4 md:m-6
+        w-full md:w-[55%]
+        max-w-5xl
+        aspect-[16/10]
         rounded-2xl
+        border border-white/10
+        p-2
+        bg-black/40
+        backdrop-blur-sm
+        shadow-2xl
       "
     >
       <video
@@ -16,18 +19,12 @@ export default function StyledArtCard() {
         loop
         muted
         playsInline
-        preload="none"
         className="
-          rounded-xl
-
           w-full h-full
-          shadow-lg
           object-cover
+          rounded-xl
         "
       />
-      <div className="text-center text-2xl my-5 font-semibold">
-        From the edge of crazy to the center of real.
-      </div>
     </div>
   );
 }
