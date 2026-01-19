@@ -18,6 +18,7 @@ export default function HomePage() {
             bendStrength={-0.5}
             interactive={true}
             parallax={true}
+            linesGradient={["#4f7cff"]}
           />
         </div>
 
